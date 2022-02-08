@@ -12,7 +12,7 @@ app.use(express.static('client/build'));
 
 app.get('/api/youtube', (_, res) => { // on a transformé le 1er param req en _ pour montrer qu'on ne l'utilise pas et que c'est voulu (pas un oubli)
     res.send({
-        msg: "Hello coders !"
+        msg: "Bonjour les gens là !!!!"
     })
 });
 

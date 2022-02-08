@@ -22,7 +22,7 @@ const App = () => {
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <button onClick={handleClick}>
-          Say Hello
+          Dis bonjour au gens là
         </button>
         <p>{msg}</p>
       </header>
