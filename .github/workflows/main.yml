@@ -18,7 +18,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 16.x
-      - run: npm run heroku-postbuild
       - name: Deploy to Heroku
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
@@ -31,4 +30,4 @@ jobs:
           HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
       - run: npm run heroku-postbuild
       - name: Push to Heroku
-        run: git push heroku master
+        run: git push heroku main
