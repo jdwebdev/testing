@@ -1,30 +1,33 @@
 import React, { useState } from 'react'
-import logo from './logo.svg'
+import Board from './games/breakout/Board'
+import Breakout from './games/breakout/index'
 import './App.css'
 
 const App = () => {
 
   const [msg, setMsg] = useState('')
 
-  const handleClick = async () => {
-    const data = await fetch('/api/youtube')
-    const json = await data.json()
-    const msg = json.msg
+  // const handleClick = async () => {
+  //   const data = await fetch('/api/youtube')
+  //   const json = await data.json()
+  //   const msg = json.msg
 
-    setMsg(msg)
+  //   setMsg(msg)
+  // }
+
+  const handleClick = () => {
+    setMsg("bla")
+    console.log(msg)
   }
 
   return (
     <div className='App'>
       <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <button onClick={handleClick}>
-          Dis bonjour au gens là
+        {/* <button onClick={handleClick}>
+          Dis bonjour aux gens là
         </button>
-        <p>{msg}</p>
+        <p>{msg}</p> */}
+        <Breakout />
       </header>
     </div>
   )
